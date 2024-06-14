@@ -7,37 +7,38 @@
 <link href="
 https://cdn.jsdelivr.net/npm/dropify@0.2.2/dist/css/dropify.min.css
 " rel="stylesheet">
-<form id=createForm method="POST" action="{{ route('music.store') }}" enctype="multipart/form-data">
+<form id=createForm method="POST" action="{{ route('music-category.store') }}" enctype="multipart/form-data">
     @csrf
     <div class="hidden-inputs"></div>
     <div class="row">
         <div class="col-lg-12 mx-auto">
             <div class="row g-3">
-            
+
 
               <div class="col-md-12">
                 <label class="form-label" for="fullname">Category Title</label>
                 <!--<select class="form-select" aria-label="Default select example" name="category_id">-->
                 <!--  <option selected value="">Text Field</option>-->
-                  
-                 
+
+
                 <!--</select>-->
                 <br>
-                <input class="form-control" style="width:100%;"  placeholder="Text Field">
-              
+                <input class="form-control" style="width:100%;"  placeholder="Category Title" name="category_name">
+
               </div>
-           
+
                 <div class="col-md-12">
                     <label class="form-label" for="fullname">Select Artist</label>
                     <select class="form-select" aria-label="Default select example" name="artist_id">
                         <option selected value="">Select</option>
-                       
-                    
+                        @foreach ($artists as $key => $value)
+                            <option value="{{$value['_id']}}">{{$value->first_name}} {{$value->last_name}}</option>
+                        @endforeach
                     </select>
-                  
-               
+
+
                 </div>
-             
+
                <div class="col-12">
                   <div class="card">
                     <h5 class="card-header">Upload Image</h5>
@@ -51,13 +52,13 @@ https://cdn.jsdelivr.net/npm/dropify@0.2.2/dist/css/dropify.min.css
                         <!--    </div>-->
                         <!--</div>-->
                         <input type='file' class='dropify'>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
-           
-          
+
+
         </div>
     </div>
     </div>
@@ -130,12 +131,12 @@ https://cdn.jsdelivr.net/npm/dropify@0.2.2/dist/css/dropify.min.css
                 }
             });
         });
-        
+
 </script>
 <script src="
 https://cdn.jsdelivr.net/npm/dropify@0.2.2/dist/js/dropify.min.js
 ">
-  
+
 </script>
 <script>  $('.dropify').dropify();</script>
 {{--

@@ -33,7 +33,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -44,6 +44,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
+
         $validated = $request->validated();
 
         $imagePath = null;

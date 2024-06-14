@@ -17,9 +17,11 @@ class ArtistController extends Controller
     public function index()
     {
 
+        $type  = 'music';
         $artist  = Artist::with('musics')->get();
+        $artists  = Artist::with('musics')->get();
         $provinces = Region::get();
-        return view('content.artist.index' , compact('artist' , 'provinces'));
+        return view('content.artist.index' , compact('artist' , 'provinces','type','artists'));
     }
 
     /**
@@ -60,10 +62,10 @@ class ArtistController extends Controller
       $artist->province_id= $request->province;
       $artist->image = $request->image??'';
 
-    //   if($request->hasFile('image')){
-    //     $path  = $request->file('image')->store('/images/artist/' , 'public');
-    //     $artist->image = $path;
-    //   }
+      if($request->hasFile('image')){
+        $path  = $request->file('image')->store('/images/artist/' , 'public');
+        $artist->image = $path;
+      }
 
     if($artist->save()){
         return redirect()->route('artist.index')->with('success', 'Artist Has been inserted');
@@ -74,7 +76,7 @@ class ArtistController extends Controller
 
     /**
      * Display the specified resource.
-     *
+     *J
      * @param  \App\Models\Artist  $artist
      * @return \Illuminate\Http\Response
      */

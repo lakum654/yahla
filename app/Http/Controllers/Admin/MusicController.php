@@ -17,12 +17,13 @@ class MusicController extends Controller
      */
     public function index(Request $request)
    {
-        
+
         // phpinfo();
         // exit();
 
         $type  = $request->segments()[0];
-        $music  = Music::where('type',$type)->with('music_category')->get();
+        // $music  = Music::where('type',$type)->with('music_category')->get();
+        $music  = Music::with('music_category')->get();
         $music_category  = MusicCategory::get();
         $artists = Artist::get();
         return view('content.music.index' , compact('music' , 'music_category' , 'artists' , 'type'));
@@ -46,6 +47,9 @@ class MusicController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        dd($request->all());
         $type  = $request->segments()[0];
         $request->validate([
             'category_id'=>'required',
@@ -181,18 +185,18 @@ class MusicController extends Controller
     {
       return view('content.music.pricing');
     }
-    
+
      public function video()
      {
         return view('content.video_clips.view');
       }
-      
+
          public function country()
      {
             $countries = Country::orderBy("name", "ASC")->get();
         return view('content.music.country',compact('countries'));
       }
-      
-     
-  
+
+
+
 }
