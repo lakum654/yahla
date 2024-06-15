@@ -17,8 +17,11 @@ class AlbumController extends Controller
     public function index()
     {
          $artist = Artist::get();
-         $album = Album::with('artist')->get();
-       return view('content.album.index' , compact('album' , 'artist'));
+         $albums = Album::with('artist')->get();
+
+
+        //  dd($albums);
+       return view('content.album.index' , compact('albums' , 'artist'));
     }
 
     /**
@@ -40,6 +43,7 @@ class AlbumController extends Controller
     public function store(Request $request)
     {
 
+        // dd($request->all());
         $request->validate([
             'artist_id' => 'required',
         ]);
@@ -47,9 +51,30 @@ class AlbumController extends Controller
         $album  = new Album();
         $album->artist_id = $request->artist_id;
         $album->title = $request->title;
-        $album->album = $request->album??[];
+        $album->album = $request->album;
         $album->image = $request->image??'';
         $album->status = $request->status;
+
+        $images = [];
+        if($request->hasFile('image')){
+            $path  = $request->file('image')->store('/images/album_image/' , 'public');
+            foreach($request->file('image') as $value) {
+                $path  = $value->store('/images/album/' , 'public');
+                $images[] = $path;
+            }
+          }
+
+
+          $album->image = $images;
+          $albumArray = [];
+          if($request->hasFile('album')){
+            foreach($request->file('album') as $value) {
+                $path  = $value->store('/images/album/' , 'public');
+                $albumArray[] = $path;
+            }
+                // dd(implode(',',$album));
+                $album->album = $albumArray;
+          }
 
         if($album->save()){
             return redirect()->route('album.index')->with('success' , 'Album Created Successfully');
@@ -135,7 +160,7 @@ class AlbumController extends Controller
 
     }
 
-    
+
     /**
      * Remove the specified resource from storage.
      *
@@ -173,7 +198,7 @@ class AlbumController extends Controller
     {
         $music = Album::find($id);
         $music->album = array_filter($music->album, function ($path) use ($request) {
-            return !($path === $request->path); 
+            return !($path === $request->path);
         });
         $music->save();
         unlink(public_path('storage/' . $request->path));
@@ -190,12 +215,12 @@ class AlbumController extends Controller
             if (file_exists($path)) {
                 unlink($path);
             }
-    
+
             // Remove the image filename from the model attribute
             $music->image = null;
             $music->save();
         }
-        
+
         return [
             'status' => true
         ];
