@@ -216,7 +216,7 @@ Route::middleware(['admin.auth', '2fa'])->group(function () use ($controller_pat
     Route::get('/app/user/list', $controller_path . '\apps\UserList@index')->name('app-user-list');
     Route::get('/app/task/list', $controller_path . '\Task\Task@index')->name('app-task-list');
     Route::get('/app/ftp/list', $controller_path . '\apps\Ftp@index')->name('app-ftp-list');
-    
+
     Route::prefix('standard')->group(function(){
     Route::get('/app/user/view/Follower',[sUserViewAccount::class,'index'])->name('app-user-view-account');
     Route::get('/app/user/view/Post',[sUserViewSecurity::class,'index'])->name('app-user-view-security');
@@ -224,7 +224,7 @@ Route::middleware(['admin.auth', '2fa'])->group(function () use ($controller_pat
     Route::get('/app/user/view/Activity',[sUserViewNotifications::class,'index'])->name('app-user-view-notifications');
     Route::get('/app/user/view/Location',[sUserViewConnections::class,'index'])->name('app-user-view-connections');
     });
-    
+
    Route::prefix('premium')->group(function(){
     Route::get('/app/user/view/Follower',[pUserViewAccount::class,'index'])->name('app-user-view-account');
     Route::get('/app/user/view/Post',[pUserViewSecurity::class,'index'])->name('app-user-view-security');
@@ -232,8 +232,8 @@ Route::middleware(['admin.auth', '2fa'])->group(function () use ($controller_pat
     Route::get('/app/user/view/Activity',[pUserViewNotifications::class,'index'])->name('app-user-view-notifications');
     Route::get('/app/user/view/Location',[pUserViewConnections::class,'index'])->name('app-user-view-connections');
     });
-    
-    
+
+
      Route::prefix('vip')->group(function(){
     Route::get('/app/user/view/Follower',[vUserViewAccount::class,'index'])->name('app-user-view-account');
     Route::get('/app/user/view/Post',[vUserViewSecurity::class,'index'])->name('app-user-view-security');
@@ -241,7 +241,7 @@ Route::middleware(['admin.auth', '2fa'])->group(function () use ($controller_pat
     Route::get('/app/user/view/Activity',[vUserViewNotifications::class,'index'])->name('app-user-view-notifications');
     Route::get('/app/user/view/Location',[vUserViewConnections::class,'index'])->name('app-user-view-connections');
     });
-    
+
     // Route::get('/app/user/view/Follower', $controller_path . '\apps\UserViewAccount@index')->name('app-user-view-account');
     // Route::get('/app/user/view/Post', $controller_path . '\apps\UserViewSecurity@index')->name('app-user-view-security');
     // Route::get('/app/user/view/Videos', $controller_path . '\apps\UserViewBilling@index')->name('app-user-view-billing');
@@ -286,71 +286,71 @@ Route::middleware(['admin.auth', '2fa'])->group(function () use ($controller_pat
     Route::get('/feeds-prefix', [PrefixController::class, 'index'])->name('feeds.prefix');
     Route::get('/feeds-reasons', [ReasonController::class,'index'])->name('feeds.reasons');
     Route::get('/feeds-policy_and_terms', [PolicyAndTermsController::class,'index'])->name('feeds.policy_terms');
-	
+
 	// food Portal
-	
-	
+
+
 // 	Route::get('user/setting/profile_banner', [FoodPortalController::class,'profile_banner'])->name('user.profile_banner');
-	
+
 	Route::get('portal/category_images', [FoodPortalController::class,'category_images'])->name('food_portal.category_images');
 	Route::get('portal/food_images', [FoodPortalController::class,'food_images'])->name('food_portal.food_images');
-	Route::get('portal/food_essentials', [FoodPortalController::class,'food_essentials'])->name('food_portal.food_essentials');	
+	Route::get('portal/food_essentials', [FoodPortalController::class,'food_essentials'])->name('food_portal.food_essentials');
 	Route::get('portal/additional_services', [FoodPortalController::class,'additional_services'])->name('food_portal.additional_services');
 	Route::get('portal/manage_additives', [FoodPortalController::class,'manage_additives'])->name('food_portal.manage_additives');
 	Route::get('portal/manage_allergies', [FoodPortalController::class,'manage_allergies'])->name('food_portal.manage_allergies');
 	Route::get('portal/manage_food_type', [FoodPortalController::class,'manage_food_type'])->name('food_portal.manage_food_type');
 	Route::get('portal/QR_table_area', [FoodPortalController::class,'QR_table_area'])->name('food_portal.QR_table_area');
 	Route::get('portal/manage_cuisine', [FoodPortalController::class,'manage_cuisine'])->name('food_portal.manage_cuisine');
-	
+
 	// restaurant
-	Route::get('restaurant/add_restaurant', [FoodPortalController::class,'add_restaurant'])->name('food_portal.add_restaurant');	
+	Route::get('restaurant/add_restaurant', [FoodPortalController::class,'add_restaurant'])->name('food_portal.add_restaurant');
 	Route::get('restaurant/manage_request', [FoodPortalController::class,'manage_request'])->name('food_portal.manage_request');
-	Route::get('restaurant/manage_restaurant', [FoodPortalController::class,'manage_restaurant'])->name('food_portal.manage_restaurant');	
+	Route::get('restaurant/manage_restaurant', [FoodPortalController::class,'manage_restaurant'])->name('food_portal.manage_restaurant');
 	Route::get('restaurant/total_restaurant', [FoodPortalController::class,'total_restaurant'])->name('food_portal.total_restaurant');
-	
+
 	Route::get('restaurant/manage_reservation', [FoodPortalController::class,'manage_reservation'])->name('food_portal.manage_reservation');
 	Route::get('restaurant/manage_reservation_plus', [FoodPortalController::class,'manage_reservation_plus'])->name('food_portal.manage_reservation_plus');
-	
+
 	Route::get('restaurant/setting/commission_reservation', [FoodPortalController::class,'commission_reservation'])->name('food_portal.commission_reservation');
 	Route::get('restaurant/setting/commission_reservation_plus', [FoodPortalController::class,'commission_reservation_plus'])->name('food_portal.commission_reservation_plus');
 	Route::get('restaurant/setting/rejected_reasons', [FoodPortalController::class,'rejected_reasons'])->name('food_portal.rejected_reasons');
 	Route::get('restaurant/setting/canceled_reasons', [FoodPortalController::class,'canceled_reasons'])->name('food_portal.canceled_reasons');
 	Route::get('restaurant/setting/restaurant_prefix', [FoodPortalController::class,'prefix'])->name('food_portal.restaurant_prefix');
-	Route::get('restaurant/setting/reasons', [FoodPortalController::class,'reasons'])->name('food_portal.reasons');	
+	Route::get('restaurant/setting/reasons', [FoodPortalController::class,'reasons'])->name('food_portal.reasons');
 	Route::get('restaurant/setting/restaurant_policy', [FoodPortalController::class,'restaurant_policy'])->name('food_portal.restaurant_policy');
-	
+
 	//
-	
-	
+
+
 	//Delivery Shops
-	
-Route::get('delivery/add_shop', [FoodPortalController::class,'add_shop'])->name('food_portal.add_shop');	
+
+Route::get('delivery/add_shop', [FoodPortalController::class,'add_shop'])->name('food_portal.add_shop');
 Route::get('delivery/delivery_manage_request', [FoodPortalController::class,'delivery_manage_request'])->name('food_portal.delivery_manage_request');
 Route::get('delivery/manage_delivery_shops', [FoodPortalController::class,'manage_delivery_shops'])->name('food_portal.manage_delivery_shops');
-	
+
 Route::get('delivery/setting/commission_delivery', [FoodPortalController::class,'commission_delivery'])->name('food_portal.commission_delivery');
 Route::get('delivery/setting/delivery_rejected_reasons', [FoodPortalController::class,'delivery_rejected_reasons'])->name('food_portal.delivery_rejected_reasons');
 Route::get('delivery/setting/delivery_canceled_reasons', [FoodPortalController::class,'delivery_canceled_reasons'])->name('food_portal.delivery_canceled_reasons');
 Route::get('delivery/setting/delivery_prefix', [FoodPortalController::class,'delivery_prefix'])->name('food_portal.delivery_prefix');
-Route::get('delivery/setting/delivery_reasons', [FoodPortalController::class,'delivery_reasons'])->name('food_portal.delivery_reasons');	
-	
+Route::get('delivery/setting/delivery_reasons', [FoodPortalController::class,'delivery_reasons'])->name('food_portal.delivery_reasons');
+
 Route::get('delivery/setting/delivery_policy_term', [FoodPortalController::class,'delivery_policy_term'])->name('food_portal.delivery_policy_term');
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
     // Users
     Route::prefix("/users")->name("users.")->group(function () {
-        
+
         Route::post('{id}/block/', [StandardUserController::class, 'block'])->name('block');
         Route::post('{id}/warn/', [StandardUserController::class, 'warn'])->name('warn');
         Route::post('{id}/upgrade/', [StandardUserController::class, 'upgrade'])->name('upgrade');
         Route::resource("standard", StandardUserController::class);
         Route::resource("premium", PremiumUserController::class);
         Route::resource("vip", DiamondUserController::class);
-        
+
         Route::get('settings/profile_banner', [StandardUserController::class,'profile_banner'])->name('profile_banner');
     });
 
@@ -360,16 +360,16 @@ Route::get('delivery/setting/delivery_policy_term', [FoodPortalController::class
     Route::post('file/images', [FileController::class, 'upload_bg'])->name('file.images');
     // Route::delete('file/delete', [FileController::class, 'delete'])->name('file.delete');
 
-	
-	
+
+
 
     // Flagged users
      Route::get('flaggedfanpage',[FlaggedUserController::class,"flaggedfanpage"]);
     Route::prefix("reports")->name("reports.")->group(function () {
         Route::resource('/flagged-users', FlaggedUserController::class);
-         
+
     });
-	//Channels	
+	//Channels
 	Route::get('addmanagechannel',[FlaggedUserController::class,"addmanagechannel"]);
 	Route::get('channelrequest',[FlaggedUserController::class,"channelrequest"]);
 	Route::get('managechannel',[FlaggedUserController::class,"managechannel"]);
@@ -377,7 +377,7 @@ Route::get('delivery/setting/delivery_policy_term', [FoodPortalController::class
 	Route::get('channels/reason',[FlaggedUserController::class,"reason"]);
 	Route::get('channels/prefix',[FlaggedUserController::class,"prefix"]);
 	Route::get('channels/policy_terms',[FlaggedUserController::class,"policy_terms"]);
-	
+
     // Reports
     Route::resource('/reports', ReportController::class);
 
@@ -397,63 +397,63 @@ Route::get('delivery/setting/delivery_policy_term', [FoodPortalController::class
 
     Route::get('/series/{id}/series', [UploadMovieController::class, 'deleteMovie'])->name('series.delete-video');
     Route::get('/series/{id}/thumbnail', [UploadMovieController::class, 'deleteImage'])->name('series.delete-thumbnail');
-    
+
     // Wisher and thanks
     Route::prefix("wishes")->name("wishes.")->group(function () {
         Route::get('setting/reasons', [WishesReasonController::class,'index'])->name('reasons');
         Route::get('setting/prefix', [WishesPrefixController::class,'index'])->name('prefix');
         Route::get('setting/policy_terms', [WishesPolicyandTermController::class,'index'])->name('policy_terms');
           Route::get('setting/pricing', [WishesReasonController::class,'pricing']);
-        
+
         Route::get('manage_greeting',[WishesReasonController::class,'manage_greeting']);
-        
+
            Route::get('manage_pray',[WishesReasonController::class,'manage_pray']);
             Route::get('manage_sympathy',[WishesReasonController::class,'manage_sympathy']);
-            
+
              Route::get('upload_card',[WishesReasonController::class,'upload_card']);
-             
+
               Route::get('upload_cardone',[WishesReasonController::class,'upload_cardone']);
-              
+
                Route::get('upload_cardtwo',[WishesReasonController::class,'upload_cardtwo']);
-               
-               
+
+
                 Route::get('add_prays',[WishesReasonController::class,'add_prays']);
-                
-                
+
+
                  Route::get('add_greeting',[WishesReasonController::class,'add_greeting']);
-                 
-                 
+
+
                    Route::get('add_verses',[WishesReasonController::class,'add_verses']);
-             
+
     });
-    
+
     Route::prefix("serviceportal")->group(function(){
          Route::get('addpricing',[ServicePortalController::class,'addpricing']);
          Route::get('prefix',[ServicePortalController::class,'prefix']);
           Route::get('reason',[ServicePortalController::class,'reason']);
            Route::get('policy_terms',[ServicePortalController::class,'policy_terms']);
              Route::get('manage_categories',[ServicePortalController::class,'manage_categories']);
-             
+
              Route::get('manage_service',[ServicePortalController::class,'manage_service']);
-             
+
              Route::get('manage_search',[ServicePortalController::class,'manage_search']);
     });
-    
+
      Route::prefix("onlineshop")->group(function(){
           Route::get('addonlineshop',[OnlineShopController::class,'addonlineshop']);
-          
+
             Route::get('newshop',[OnlineShopController::class,'newshop']);
-            
+
               Route::get('manageshop',[OnlineShopController::class,'manageshop']);
                 Route::get('manageitem',[OnlineShopController::class,'manageitem']);
-                
-                
+
+
                  Route::get('commisionsetting',[OnlineShopController::class,'commisionsetting']);
                   Route::get('taxsetting',[OnlineShopController::class,'taxsetting']);
                    Route::get('currency',[OnlineShopController::class,'currency']);
                     Route::get('additionalservices',[OnlineShopController::class,'additionalservices']);
                        Route::get('shipping',[OnlineShopController::class,'shipping']);
-          
+
      Route::prefix("setting")->group(function(){
          Route::get('prefix',[OnlineShopController::class,'prefix']);
           Route::get('reason',[OnlineShopController::class,'reason']);
@@ -473,7 +473,7 @@ Route::get('delivery/setting/delivery_policy_term', [FoodPortalController::class
     // Stories
     Route::resource('/stories', StoryController::class)->only('index', 'store', 'update', 'destroy');
       Route::get('story/ManageStories',[StoryController::class,'ManageStories']);
-      
+
         Route::get('story/ReportedStories',[StoryController::class,'ManageStoriestwo']);
 
     // Events
@@ -513,10 +513,11 @@ Route::get('delivery/setting/delivery_policy_term', [FoodPortalController::class
     Route::get('/news_category/{id}/{status}', [NewsCategoryController::class, 'status'])->name('newscat-status');
     // Music
     Route::resource('/music', MusicController::class);
+    Route::put('/music_update/{id}', [MusicController::class,'update'])->name('music_update');
     Route::get('/musics/{id}/{status}', [MusicController::class, 'status'])->name('musics-status');
     Route::get('setting/music/pricing', [MusicController::class,'pricing'])->name('music.pricing');
     Route::get('setting/music/prefix', [PrefixController::class, 'index'])->name('music.prefix');
-    
+
     Route::get('musics/1',[MusicController::class,'video']);
     Route::get('setting/music/country', [MusicController::class, 'country']);
 
@@ -545,7 +546,7 @@ Route::get('delivery/setting/delivery_policy_term', [FoodPortalController::class
 
     // Album
     Route::resource('/album', AlbumController::class);
-    
+
     // Movie
     Route::resource('upload-video', UplaodVideoController::class);
     Route::resource('/upload-video-category', UploadVideoCategoryController::class);
@@ -573,7 +574,7 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
     Route::post('/categories/{id}', [CategoryDepartmentController::class, 'update123'])->name('categories.update');
     Route::delete('/departmentcategories/{id}', [CategoryDepartmentController::class, 'destroy123'])->name('categories123.destroy');
    // In web.php
- 
+
 
 
     Route::resource('/report-video', ReportVideoController::class);
@@ -644,9 +645,9 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
     Route::delete('/bazar/{id}/image', [BazarController::class, 'deleteBazarImage'])->name('bazar.delete-img');
 
     Route::resource('bazar-subcategory', SubCategoryBazarController::class);
-    
+
           Route::get('bazars/manage_categories',[BazarController::class,'manage_categories']);
-          
+
            Route::get('bazars/pricing_plans',[BazarController::class,'pricing_plans']);
       Route::get('bazars/setting/prefix',[BazarController::class,'prefix']);
           Route::get('bazars/setting/reason',[BazarController::class,'reason']);
@@ -662,7 +663,7 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
     // Route::get('/managefanpage-status/{id}/{status}' , [ManageFanPageController::class, 'status'])->name('fanpage.managefanpage-status');
     // Route::resource('/block-fanpage' , BlockFanPageController::class);
     // Route::get('/blockfanpage-status/{id}/{status}' , [BlockFanPageController::class, 'status'])->name('fanpage.blockfanpage-status');
-     
+
 
     // Ads
     Route::get('/ads/categories', [CategoryController::class, 'index'])->name('ads.categories.index');
@@ -691,9 +692,9 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
           Route::prefix('team')->name('team.')->group(function () {
             Route::resource('members', TeamMemberController::class);
             Route::resource('roles', RoleController::class);
-            
-           
-            
+
+
+
         });
        Route::delete('/member/{id}/image', [TeamMemberController::class, 'deleteMemberImage'])->name('user.delete-img');
 
@@ -773,24 +774,24 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
 
 
     Route::resource("events", EventController::class);
-    
+
     //Wizard Controller
  Route::resource('wizard_example', WizardController::class);
  Route::get('wizard-ex-checkout',[WizardController::class,'wizard_ex_checkout']);
-    
+
 
     // policy and terms
     Route::resource('policy_and_terms', PolicyAndTermsController::class);
     Route::get('musics/policy_and_terms', [PolicyAndTermsController::class,'index'])->name('music.policy_and_terms.index');
     Route::get('team/policy_and_terms', [PolicyAndTermsController::class,'index'])->name('team.policy_and_terms.index');
- 
+
     Route::post('saveFileds', [PolicyAndTermsController::class, 'saveFileds'])->name('policy_and_terms.saveFileds');
     // system logs
     Route::resource('logs', SystemLogController::class);
     Route::get('department',[SubCategoryDepartmentController::class,'manage_department']);
-    
+
       Route::get('backup_setting',[SystemLogController::class,'backup_setting']);
-       
+
           Route::get('storage_setting',[SystemLogController::class,'storage_setting']);
 
     // News
@@ -848,13 +849,13 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
 
     Route::resource('/report-video', ReportVideoController::class);
     Route::get('/report_vidoe/{id}/{status}', [ReportVideoController::class, 'status'])->name('report-status');
-    
+
    Route::get('/manage_video', [ReportVideoController::class, 'manage_video']);
     Route::get('/video_request', [ReportVideoController::class, 'video_request']);
-    
-    
-    
-    
+
+
+
+
       Route::get('/prefix', [ReportVideoController::class, 'prefix']);
         Route::get('/policyterms', [ReportVideoController::class, 'policyterms']);
          Route::get('/reason', [ReportVideoController::class, 'reason']);
@@ -898,7 +899,7 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
     Route::get('/bazar/{id}/{status}', [BazarController::class, 'status'])->name('bazar-status');
     Route::resource('/bazar-category', BazarCategoryController::class);
     Route::get('/bazar-category/{id}/{status}', [BazarCategoryController::class, 'status'])->name('bazarcat-status');
-    
+
     // Currency
     Route::get('/currency', [CurrencyController::class, 'index'])->name('index');
 
@@ -931,7 +932,7 @@ Route::put('/department/{id}', [CategoryDepartmentController::class, 'update'])-
     // maps
     Route::get('/maps/leaflet', $controller_path . '\maps\Leaflet@index')->name('maps-leaflet');
 
-    
+
     // Smiley
     Route::resource('/smiley', SmileyController::class);
     Route::delete('smiley/{id}/delete-smiley', [SmileyController::class, 'deleteSmiley'])->name('smiley.delete-image');

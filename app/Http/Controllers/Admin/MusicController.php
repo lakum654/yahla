@@ -117,14 +117,17 @@ class MusicController extends Controller
     public function update(Request $request, $id)
     {
 
+        // dd($request->all());
+        // dd($id,$request->all());
         $music = Music::findorFail($id);
         $music->name = $request->title;
         $music->category_id = $request->category_id;
         $music->artist_id = $request->artist_id;
         $music->audio = $request->audio_paths ?? [];
         $music->status = $request->status;
-        if($music->update()){
-            return redirect()->back()->with('success', 'Music Has been Updated');
+        // dd($music->save());
+        if($music->save()){
+            return redirect(route('music.index'))->with('success', 'Music Has been Updated');
 
         }else{
             return redirect()->back()->with('success', 'Music not updated');

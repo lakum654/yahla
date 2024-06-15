@@ -6,6 +6,7 @@ use App\Models\Artist;
 use App\Models\Region;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\MusicCategory;
 
 class ArtistController extends Controller
 {
@@ -21,7 +22,8 @@ class ArtistController extends Controller
         $artist  = Artist::with('musics')->get();
         $artists  = Artist::with('musics')->get();
         $provinces = Region::get();
-        return view('content.artist.index' , compact('artist' , 'provinces','type','artists'));
+        $music_category = MusicCategory::all();
+        return view('content.artist.index' , compact('artist' , 'provinces','type','artists','music_category'));
     }
 
     /**

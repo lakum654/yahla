@@ -28,7 +28,7 @@
 
             {{-- @dd($music) --}}
             <div class="card-body">
-                <form method="POST" action="{{ route('music.update',$music->id) }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('music_update',$music->id) }}" enctype="multipart/form-data">
                     @csrf
                     @method('put')
                     <div class="row">
@@ -57,13 +57,17 @@
                                 <div class="col-md-12">
                                     <label class="form-label" for="fullname">Audio</label>
                                     <input type="file" name="audio" class="form-control" id="audio" accept="audio/*" />
+
+                                    <br/>
+
+                                    {{-- @dd($music,$music->audio) --}}
                                     <audio controls>
                                         <source src="{{ asset('storage/'.implode(',',$music->audio)) }}" /></audio>
                                     @error('audio')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
-                                <button class="mt-1 btn btn-primary">Submit</button>
+                                <button class="mt-1 btn btn-primary" type="submit">Update</button>
                             </div>
                         </div>
                     </div>
