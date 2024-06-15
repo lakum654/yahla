@@ -8,8 +8,8 @@ $configData = Helper::appClasses();
   <div class="app-brand demo ">
     <a href="{{url('/')}}" class="app-brand-link">
       <span class="app-brand-logo demo">
-		  
-		  
+
+
 		  <!--
         <svg width="220" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -53,7 +53,7 @@ $configData = Helper::appClasses();
             </g>
           </g>
         </svg>-->
-		  
+
 		 <svg width="439" height="213" viewBox="0 0 339 113" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <path d="M134.622 42.8937V28.0137L120.462 8.09374L119.022 6.09374H130.142L140.702 22.4137L151.262 6.09374H158.702L156.862 8.33374L142.862 28.0137V39.5337C142.915 40.3871 142.835 41.0804 142.622 41.6137C142.409 42.0937 142.035 42.4404 141.502 42.6537C140.969 42.8137 140.222 42.8937 139.262 42.8937H134.622ZM175.934 43.3737C172.627 43.3737 169.934 43.2137 167.854 42.8937C165.774 42.6271 164.174 42.1204 163.054 41.3737C161.934 40.6271 161.16 39.6137 160.734 38.3337C160.36 37.0537 160.174 35.4537 160.174 33.5337C160.174 30.8137 160.467 28.7604 161.054 27.3737C161.694 25.9337 162.76 24.9471 164.254 24.4137C165.8 23.8804 167.854 23.6137 170.414 23.6137C171.747 23.6137 173.214 23.6404 174.814 23.6937C176.467 23.7471 178.04 23.8271 179.534 23.9337C181.08 23.9871 182.414 24.0671 183.534 24.1737C184.707 24.2804 185.48 24.4137 185.854 24.5737C185.854 22.3337 185.667 20.5737 185.294 19.2937C184.92 18.0137 184.307 17.0537 183.454 16.4137C182.654 15.7737 181.64 15.3471 180.414 15.1337C179.187 14.9204 177.747 14.8137 176.094 14.8137C174.28 14.8137 172.467 14.8671 170.654 14.9737C168.894 15.0804 167.214 15.2671 165.614 15.5337C164.067 15.8004 162.787 16.1471 161.774 16.5737V15.0537C161.774 13.8271 162.094 12.9471 162.734 12.4137C163.427 11.8804 164.254 11.5337 165.214 11.3737C166.28 11.1071 167.854 10.8937 169.934 10.7337C172.014 10.5737 174.227 10.5204 176.574 10.5737C179.56 10.5737 182.094 10.7337 184.174 11.0537C186.307 11.3204 188.014 11.9071 189.294 12.8137C190.627 13.7204 191.587 15.0804 192.174 16.8937C192.814 18.7071 193.134 21.1337 193.134 24.1737V40.4937C192.654 41.5071 191.027 42.2537 188.254 42.7337C185.48 43.1604 181.374 43.3737 175.934 43.3737ZM175.934 40.0137C178.067 40.0137 179.8 39.9604 181.134 39.8537C182.52 39.6937 183.587 39.5071 184.334 39.2937C185.08 39.0271 185.587 38.7071 185.854 38.3337V27.2937C185.374 27.1337 184.52 27.0004 183.294 26.8937C182.067 26.7337 180.787 26.6004 179.454 26.4937C178.12 26.3871 177 26.3337 176.094 26.3337C174.12 26.3337 172.52 26.4671 171.294 26.7337C170.067 27.0004 169.187 27.6137 168.654 28.5737C168.12 29.5337 167.854 31.0271 167.854 33.0537C167.854 34.7071 168.04 36.0404 168.414 37.0537C168.787 38.0671 169.534 38.8137 170.654 39.2937C171.827 39.7737 173.587 40.0137 175.934 40.0137ZM204.256 42.8937C202.976 42.8937 202.149 42.7071 201.776 42.3337C201.456 41.9604 201.296 41.1871 201.296 40.0137V2.57374H208.816V12.0137C209.456 11.8004 210.282 11.6404 211.296 11.5337C212.362 11.3737 213.482 11.2404 214.656 11.1337C215.882 11.0271 217.002 10.9737 218.016 10.9737C221.376 10.9737 224.042 11.2671 226.016 11.8537C227.989 12.4404 229.456 13.3204 230.416 14.4937C231.429 15.6137 232.096 17.0271 232.416 18.7337C232.736 20.4404 232.896 22.4671 232.896 24.8137V39.2137C232.896 40.2804 232.789 41.0804 232.576 41.6137C232.416 42.1471 232.096 42.4937 231.616 42.6537C231.136 42.8137 230.416 42.8937 229.456 42.8937H225.536V23.3737C225.536 20.9737 225.216 19.1604 224.576 17.9337C223.936 16.7071 222.949 15.8804 221.616 15.4537C220.336 14.9737 218.709 14.7337 216.736 14.7337C215.989 14.7337 215.082 14.7871 214.016 14.8937C213.002 14.9471 212.016 15.0537 211.056 15.2137C210.149 15.3204 209.402 15.5071 208.816 15.7737V42.8937H204.256ZM255.778 43.3737C252.471 43.3737 249.778 43.2137 247.698 42.8937C245.618 42.6271 244.018 42.1204 242.898 41.3737C241.778 40.6271 241.004 39.6137 240.578 38.3337C240.204 37.0537 240.018 35.4537 240.018 33.5337C240.018 30.8137 240.311 28.7604 240.898 27.3737C241.538 25.9337 242.604 24.9471 244.098 24.4137C245.644 23.8804 247.698 23.6137 250.258 23.6137C251.591 23.6137 253.058 23.6404 254.658 23.6937C256.311 23.7471 257.884 23.8271 259.378 23.9337C260.924 23.9871 262.258 24.0671 263.378 24.1737C264.551 24.2804 265.324 24.4137 265.698 24.5737C265.698 22.3337 265.511 20.5737 265.138 19.2937C264.764 18.0137 264.151 17.0537 263.298 16.4137C262.498 15.7737 261.484 15.3471 260.258 15.1337C259.031 14.9204 257.591 14.8137 255.938 14.8137C254.124 14.8137 252.311 14.8671 250.498 14.9737C248.738 15.0804 247.058 15.2671 245.458 15.5337C243.911 15.8004 242.631 16.1471 241.618 16.5737V15.0537C241.618 13.8271 241.938 12.9471 242.578 12.4137C243.271 11.8804 244.098 11.5337 245.058 11.3737C246.124 11.1071 247.698 10.8937 249.778 10.7337C251.858 10.5737 254.071 10.5204 256.418 10.5737C259.404 10.5737 261.938 10.7337 264.018 11.0537C266.151 11.3204 267.858 11.9071 269.138 12.8137C270.471 13.7204 271.431 15.0804 272.018 16.8937C272.658 18.7071 272.978 21.1337 272.978 24.1737V40.4937C272.498 41.5071 270.871 42.2537 268.098 42.7337C265.324 43.1604 261.218 43.3737 255.778 43.3737ZM255.778 40.0137C257.911 40.0137 259.644 39.9604 260.978 39.8537C262.364 39.6937 263.431 39.5071 264.178 39.2937C264.924 39.0271 265.431 38.7071 265.698 38.3337V27.2937C265.218 27.1337 264.364 27.0004 263.138 26.8937C261.911 26.7337 260.631 26.6004 259.298 26.4937C257.964 26.3871 256.844 26.3337 255.938 26.3337C253.964 26.3337 252.364 26.4671 251.138 26.7337C249.911 27.0004 249.031 27.6137 248.498 28.5737C247.964 29.5337 247.698 31.0271 247.698 33.0537C247.698 34.7071 247.884 36.0404 248.258 37.0537C248.631 38.0671 249.378 38.8137 250.498 39.2937C251.671 39.7737 253.431 40.0137 255.778 40.0137ZM288.979 43.2137C286.153 43.2137 284.126 42.6537 282.899 41.5337C281.673 40.3604 281.059 38.3071 281.059 35.3737V5.69374C281.059 4.8404 281.113 4.2004 281.219 3.77374C281.379 3.29374 281.673 2.97374 282.099 2.81373C282.526 2.6004 283.166 2.49374 284.019 2.49374H288.659C288.659 2.6004 288.606 3.02707 288.499 3.77374C288.446 4.5204 288.419 5.4004 288.419 6.41374V34.4137C288.419 36.3871 288.659 37.8004 289.139 38.6537C289.619 39.5071 290.526 39.9337 291.859 39.9337C292.286 39.9337 292.793 39.8804 293.379 39.7737C294.019 39.6671 294.419 39.5871 294.579 39.5337V42.5737C294.259 42.6271 293.699 42.7337 292.899 42.8937C292.099 43.1071 290.793 43.2137 288.979 43.2137ZM314.215 43.3737C310.908 43.3737 308.215 43.2137 306.135 42.8937C304.055 42.6271 302.455 42.1204 301.335 41.3737C300.215 40.6271 299.442 39.6137 299.015 38.3337C298.642 37.0537 298.455 35.4537 298.455 33.5337C298.455 30.8137 298.748 28.7604 299.335 27.3737C299.975 25.9337 301.042 24.9471 302.535 24.4137C304.082 23.8804 306.135 23.6137 308.695 23.6137C310.028 23.6137 311.495 23.6404 313.095 23.6937C314.748 23.7471 316.322 23.8271 317.815 23.9337C319.362 23.9871 320.695 24.0671 321.815 24.1737C322.988 24.2804 323.762 24.4137 324.135 24.5737C324.135 22.3337 323.948 20.5737 323.575 19.2937C323.202 18.0137 322.588 17.0537 321.735 16.4137C320.935 15.7737 319.922 15.3471 318.695 15.1337C317.468 14.9204 316.028 14.8137 314.375 14.8137C312.562 14.8137 310.748 14.8671 308.935 14.9737C307.175 15.0804 305.495 15.2671 303.895 15.5337C302.348 15.8004 301.068 16.1471 300.055 16.5737V15.0537C300.055 13.8271 300.375 12.9471 301.015 12.4137C301.708 11.8804 302.535 11.5337 303.495 11.3737C304.562 11.1071 306.135 10.8937 308.215 10.7337C310.295 10.5737 312.508 10.5204 314.855 10.5737C317.842 10.5737 320.375 10.7337 322.455 11.0537C324.588 11.3204 326.295 11.9071 327.575 12.8137C328.908 13.7204 329.868 15.0804 330.455 16.8937C331.095 18.7071 331.415 21.1337 331.415 24.1737V40.4937C330.935 41.5071 329.308 42.2537 326.535 42.7337C323.762 43.1604 319.655 43.3737 314.215 43.3737ZM314.215 40.0137C316.348 40.0137 318.082 39.9604 319.415 39.8537C320.802 39.6937 321.868 39.5071 322.615 39.2937C323.362 39.0271 323.868 38.7071 324.135 38.3337V27.2937C323.655 27.1337 322.802 27.0004 321.575 26.8937C320.348 26.7337 319.068 26.6004 317.735 26.4937C316.402 26.3871 315.282 26.3337 314.375 26.3337C312.402 26.3337 310.802 26.4671 309.575 26.7337C308.348 27.0004 307.468 27.6137 306.935 28.5737C306.402 29.5337 306.135 31.0271 306.135 33.0537C306.135 34.7071 306.322 36.0404 306.695 37.0537C307.068 38.0671 307.815 38.8137 308.935 39.2937C310.108 39.7737 311.868 40.0137 314.215 40.0137Z" fill="white"/>
 <path d="M75.353 99.9065C73.9701 99.1549 72.6562 98.7526 71.3789 98.2488C67.9836 96.9101 64.5559 95.6302 61.3596 93.8425C59.5929 92.8532 58.1552 91.4961 57.0058 89.812C55.4645 87.557 55.5193 85.2045 56.6545 82.8764C57.5561 81.0237 58.9167 79.4574 60.1737 77.8221C65.3133 71.1445 67.4963 63.7986 60.3036 57.4562C55.8402 53.5192 49.6629 51.6949 44.2511 49.4684C37.8037 46.8172 31.3015 44.2982 24.7505 41.9132C17.0847 39.1239 11.348 35.9081 6.89879 28.8506C5.41842 26.5022 4.10457 24.0624 3.14 21.4438C1.82615 17.8724 0.961081 14.2055 0.534639 10.4228C0.236129 7.77173 0.32751 5.16531 0.940775 2.56295C1.39159 0.651305 1.59465 0.503007 3.31667 1.50454C6.70993 3.47713 10.0768 5.49441 13.4619 7.47919C25.0591 14.2786 36.5975 21.1898 48.1541 28.034C58.0597 33.9009 69.2224 38.3337 77.1461 46.996C78.6122 48.5989 79.9525 50.3439 80.8581 52.3206C85.3825 62.1978 82.2959 71.5346 74.431 78.4173C70.6032 81.7672 59.9909 87.811 67.0008 93.3143C68.4101 94.4195 69.9006 95.423 71.3525 96.4733C72.4775 97.2859 73.6025 98.0965 74.7194 98.9192C74.955 99.094 75.2332 99.2524 75.353 99.9065Z" fill="white"/>
@@ -72,7 +72,7 @@ $configData = Helper::appClasses();
 </defs>
 </svg>
 
-		  
+
       </span>
     </a>
 
@@ -96,7 +96,7 @@ $configData = Helper::appClasses();
     <li class="menu-header small text-uppercase">
       <span class="menu-header-text">Customers</span>
     </li>
-   
+
     <li class="menu-item  {{ Request::is('users/*') ? 'active open' : '' }} {{ Request::is('premium/*') ? 'active open' : '' }} {{ Request::is('standard/*') ? 'active open' : '' }} {{ Request::is('vip/*') ? 'active open' : '' }}  {{ Request::is('settings/*') ? 'active open' : '' }}" style="">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-group"></i>
@@ -106,7 +106,7 @@ $configData = Helper::appClasses();
         <li class="menu-item  {{ Request::is('users/standard') ? 'active' : '' }}  {{ Request::is('standard/*') ? 'active' : '' }}">
           <a href="{{url('users/standard')}}" class="menu-link">
 
-         
+
             <div>Standard</div>
           </a>
         </li>
@@ -125,13 +125,13 @@ $configData = Helper::appClasses();
             <div>Settings</div>
           </a>
           <ul class="menu-sub">
-			
+
 			<li class="menu-item {{ Request::is('users/settings/profile_banner') ? 'active open' : '' }} ">
               <a href=" {{ route('users.profile_banner') }}" class="menu-link">
                 <div>Profile Banner</div>
               </a>
             </li>
-			  
+
             <li class="menu-item {{ Request::is('settings/user-roles/standard') ? 'active' : '' }}">
               <a href="{{url('settings/user-roles/standard')}}" class="menu-link">
                 <div>User Roles</div>
@@ -178,7 +178,7 @@ $configData = Helper::appClasses();
         <div>Channels</div>
       </a>
       <ul class="menu-sub">
-		  
+
 		   <li class="menu-item {{ Request::is('addmanagechannel') ? 'active ' : '' }}">
           <a href="{{url('addmanagechannel')}}" class="menu-link">
             <div>Add Manage Channels</div>
@@ -199,10 +199,10 @@ $configData = Helper::appClasses();
             <div>Channel Admin</div>
           </a>
         </li>
-       
-       
-      
-      
+
+
+
+
         <li class="menu-item {{ Request::is('settings/*') ? 'active open' : '' }} {{ Request::is('channels/reason') ? 'active open' : '' }} {{ Request::is('channels/prefix') ? 'active open' : '' }} {{ Request::is('channels/policy_terms') ? 'active open' : '' }}">
           <a href="javascript:void(0)" class="menu-link menu-toggle">
             <div>Settings</div>
@@ -733,7 +733,7 @@ $configData = Helper::appClasses();
 
 
     <li class="menu-item {{ Request::is('videos/*') ? 'active open' : ''}} {{ Request::is('manage_video') ? 'active open' : ''}}  {{ Request::is('video_request') ? 'active open' : '' }} {{ Request::is('reason') ? 'active open' : '' }} {{ Request::is('prefix') ? 'active open' : '' }} {{ Request::is('policyterms') ? 'active open' : '' }}">
-        
+
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-video"></i>
         <div>Videos</div>
@@ -751,8 +751,8 @@ $configData = Helper::appClasses();
 
 
         </li>
-        
-         
+
+
 
 
 
@@ -975,7 +975,7 @@ $configData = Helper::appClasses();
 
 
   <li class="menu-item {{ Request::is('wishes/manage_greeting') ? 'active' : '' }}">
-     
+
           <a href="{{url('wishes/manage_greeting?view=new_request')}} " class="menu-link">
                 <div>Manage Greeting</div>
               </a>
@@ -985,17 +985,17 @@ $configData = Helper::appClasses();
 
 
   <li class="menu-item {{ Request::is('wishes/upload_cardtwo') ? 'active' : '' }}">
-     
+
           <a href="{{url('wishes/upload_cardtwo?view=new_request')}} " class="menu-link">
                 <div>Upload Cards</div>
               </a>
 
 
             </li>
-            
-          
+
+
   <!--<li class="menu-item {{ Request::is('wishes/add_greeting') ? 'active' : '' }}">-->
-     
+
   <!--        <a href="{{url('wishes/add_greeting?view=new_request')}} " class="menu-link">-->
   <!--              <div>Add Greeting</div>-->
   <!--            </a>-->
@@ -1003,11 +1003,11 @@ $configData = Helper::appClasses();
 
   <!--          </li>-->
 
-          
 
 
 
-         
+
+
           </ul>
         </li>
 
@@ -1032,7 +1032,7 @@ $configData = Helper::appClasses();
             </li>
 
            <li class="menu-item {{ Request::is('wishes/upload_card') ? 'active' : '' }}">
-     
+
           <a href="{{url('wishes/upload_card?view=new_request')}} " class="menu-link">
                 <div>Upload Cards</div>
               </a>
@@ -1040,9 +1040,9 @@ $configData = Helper::appClasses();
 
             </li>
 
-          
+
  <li class="menu-item {{ Request::is('wishes/add_prays') ? 'active' : '' }}">
-     
+
           <a href="{{url('wishes/add_prays?view=new_request')}} " class="menu-link">
                 <div>Add Prays</div>
               </a>
@@ -1051,7 +1051,7 @@ $configData = Helper::appClasses();
             </li>
 
 
-         
+
           </ul>
         </li>
 
@@ -1080,7 +1080,7 @@ $configData = Helper::appClasses();
             </li>
 
            <li class="menu-item {{ Request::is('wishes/upload_cardone') ? 'active' : '' }}">
-     
+
           <a href="{{url('wishes/upload_cardone?view=new_request')}} " class="menu-link">
                 <div>Upload Cards</div>
               </a>
@@ -1088,9 +1088,9 @@ $configData = Helper::appClasses();
 
             </li>
 
-          
+
     <li class="menu-item {{ Request::is('wishes/add_verses') ? 'active' : '' }}">
-     
+
           <a href="{{url('wishes/add_verses?view=new_request')}} " class="menu-link">
                 <div>Add verses</div>
               </a>
@@ -1099,7 +1099,7 @@ $configData = Helper::appClasses();
             </li>
 
 
-         
+
           </ul>
         </li>
 
@@ -1242,7 +1242,7 @@ $configData = Helper::appClasses();
 
 
 
-         
+
 
 
 
@@ -1386,6 +1386,12 @@ $configData = Helper::appClasses();
           </a>
 
 
+          <li class="menu-item {{ Request::is('music-category') ? 'active' : '' }}">
+            <a href="{{url('video-clips')}}" class="menu-link">
+              <div>Music Category</div>
+            </a>
+
+
         </li>
 
 
@@ -1427,10 +1433,10 @@ $configData = Helper::appClasses();
 
 
             </li>
-            
-            
-            
-            
+
+
+
+
               <li class="menu-item {{ Request::is('setting/music/country') ? 'active' : '' }}">
               <a href="{{url('setting/music/country')}}" class="menu-link">
                 <div>Country</div>
@@ -1975,7 +1981,7 @@ $configData = Helper::appClasses();
             <div>Additional Services</div>
           </a>
         </li>
-		
+
 		   <li class="menu-item {{ Request::is('portal/manage_additives') ? 'active' : '' }}">
           <a href="{{ route('food_portal.manage_additives') }}" class="menu-link">
             <div>Manage Additives</div>
@@ -1996,13 +2002,13 @@ $configData = Helper::appClasses();
             <div>Qr- Table Area</div>
           </a>
         </li>
-        
+
         <li class="menu-item  {{ Request::is('portal/manage_cuisine') ? 'active' : '' }}">
           <a href="{{ route('food_portal.manage_cuisine') }}" class="menu-link">
             <div>Manage Cuisine</div>
           </a>
         </li>
-        
+
         <li class="menu-item {{ Request::is('movie/setting/*') ? 'active open' : '' }} d-none">
           <a href="javascript:void(0)" class="menu-link menu-toggle">
             <div>Settings</div>
@@ -2043,13 +2049,13 @@ $configData = Helper::appClasses();
             <div>Manage Restaurant</div>
           </a>
         </li>
-		  
+
 		<!--<li class="menu-item {{ Request::is('restaurant/total_restaurant') ? 'active' : '' }}">
           <a href="{{ route('food_portal.total_restaurant') }}" class="menu-link">
             <div>Total Restaurant</div>
           </a>
         </li>-->
-		
+
         <li class="menu-item {{ Request::is('restaurant/manage_reservation') ? 'active' : '' }}">
           <a href="{{ route('food_portal.manage_reservation') }}" class="menu-link">
             <div>Manage Reservation</div>
@@ -2060,13 +2066,13 @@ $configData = Helper::appClasses();
             <div>Manage Reservation + </div>
           </a>
         </li>
-		 
+
         <li class="menu-item {{ Request::is('restaurant/setting/*') ? 'active open' : '' }}">
           <a href="javascript:void(0)" class="menu-link menu-toggle">
             <div>Settings</div>
           </a>
           <ul class="menu-sub">
-           
+
 			    <li class="menu-item {{ Request::is('restaurant/setting/commission_reservation') ? 'active' : '' }}">
               <a href="{{ route('food_portal.commission_reservation') }}" class="menu-link">
                 <div>Comision Reservation Standards	</div>
@@ -2119,7 +2125,7 @@ $configData = Helper::appClasses();
             <div>Add Delivery Shops</div>
           </a>
         </li>
-		 
+
 		   <li class="menu-item {{ Request::is('delivery/delivery_manage_request') ? 'active' : '' }}">
           <a href="{{ route('food_portal.delivery_manage_request') }}" class="menu-link">
             <div>Manage Request</div>
@@ -2135,20 +2141,20 @@ $configData = Helper::appClasses();
             <div>Manage Orders</div>
           </a>
         </li>
-		  
-		 
+
+
         <li class="menu-item {{ Request::is('delivery/setting/*') ? 'active open' : '' }}">
           <a href="javascript:void(0)" class="menu-link menu-toggle">
             <div>Settings</div>
           </a>
           	<ul class="menu-sub">
-           
+
 			    <li class="menu-item {{ Request::is('delivery/setting/commission_delivery') ? 'active' : '' }}">
               <a href="{{ route('food_portal.commission_delivery') }}" class="menu-link">
                 <div>Comision Delivery</div>
               </a>
             </li>
-			  
+
 			   <li class="menu-item {{ Request::is('delivery/setting/delivery_rejected_reasons') ? 'active' : '' }}">
               <a href="{{ route('food_portal.delivery_rejected_reasons') }}" class="menu-link">
                 <div>Rejected Reason</div>
@@ -2509,14 +2515,14 @@ $configData = Helper::appClasses();
         <div>App Info</div>
       </a>
     </li>
-     
+
     <li class="menu-item {{ Request::is('settings/ringtone') ? 'active open' : '' }}{{ Request::is('settings/bank-transfer') ? 'active open' : '' }}{{ Request::is('settings/paypal-stripe') ? 'active open' : '' }}{{ Request::is('settings/payment-methods') ? 'active open' : '' }}">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-music"></i>
         <div>Add Ringtone</div>
       </a>
       <ul class="menu-sub">
-        
+
         <li class="menu-item {{ Request::is('settings/ringtone') ? 'active' : '' }}">
           <a href="{{url('settings/app-setting/ringtone')}}" class="menu-link">
             <div>Massege Ringtone</div>
@@ -2546,49 +2552,49 @@ $configData = Helper::appClasses();
       </a>
     </li>
     <!--add-->
-    
-    
+
+
     <!--<li class="menu-item active open" style="">-->
     <!--  <a href="javascript:void(0);" class="menu-link menu-toggle">-->
     <!--            <i class="menu-icon tf-icons bx bx-spreadsheet"></i>-->
     <!--            <div class="text-truncate">Wizard Examples</div>-->
     <!--          </a>-->
 
-      
+
     <!--        <ul class="menu-sub">-->
-      
-    
+
+
     <!--   <li class="menu-item {{ Request::is('setting/live/reasons') ? 'active' : '' }}">-->
     <!--          <a href="{{url('setting/live/reasons')}}" class="menu-link">-->
     <!--                <div>Checkout</div>-->
     <!--    </a>-->
 
-        
+
     <!--          </li>-->
-    
-    
-    
+
+
+
     <!--  <li class="menu-item">-->
     <!--    <a href="{{url('wizard-ex-checkout')}}" class="menu-link">-->
     <!--                <div>Property Listing</div>-->
     <!--    </a>-->
 
-        
+
     <!--          </li>-->
-    
-    
-    
+
+
+
     <!--  <li class="menu-item ">-->
     <!--    <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1/wizard/ex-create-deal" class="menu-link">-->
     <!--                <div>Create Deal</div>-->
     <!--    </a>-->
 
-        
+
     <!--          </li>-->
     <!--  </ul>-->
     <!--      </li>-->
-    
-    
+
+
     <!--add-->
     <li class="menu-header small text-uppercase">
       <span class="menu-header-text">System Settings</span>
@@ -2611,7 +2617,7 @@ $configData = Helper::appClasses();
         <div>FTP Settings</div>
       </a>
     </li>
-    
+
     <li class="menu-item {{ Request::is('BackupSection/*') ? 'active open' : '' }} {{ Request::is('backup_setting') ? 'active open' : '' }}">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-cloud-upload"></i>
@@ -2665,28 +2671,28 @@ $configData = Helper::appClasses();
         </li>
       </ul>
     </li>
-    
+
         <li class="menu-item {{ Request::is('department') ? 'active' : '' }}">
       <a href="{{url('department')}}" class="menu-link">
         <i class="menu-icon tf-icons bx bx-wrench"></i>
         <div>Department</div>
       </a>
     </li>
-    
+
     <!--  <li class="menu-item {{ Request::is('') ? 'active' : '' }}">-->
     <!--  <a href="{{url('')}}" class="menu-link">-->
     <!--    <i class="menu-icon tf-icons bx bx-devices"></i>-->
     <!--    <div>Backup Setting</div>-->
     <!--  </a>-->
     <!--</li>-->
-    
+
       <li class="menu-item {{ Request::is('storage_setting') ? 'active' : '' }}">
       <a href="{{url('storage_setting')}}" class="menu-link">
         <i class="menu-icon tf-icons bx bx-devices"></i>
         <div>Storage Setting</div>
       </a>
     </li>
-    
+
     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
       <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
     </div>

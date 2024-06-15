@@ -152,32 +152,35 @@ https://cdn.jsdelivr.net/npm/dropify@0.2.2/dist/css/dropify.min.css
                 <tbody class="table-border-bottom-0">
                     @foreach($music as $key => $value)
                     <tr>
-                        <td>1</td>
+                        <td>{{++$key}}</td>
                         <td>
-                            <img height="50px" width="50%" src="https://www.w3schools.com/howto/img_avatar.png"
+                            <img height="50px" width="50%" src="{{ asset('storage/'.implode(',',$value->audio)) }}"
                                 alt="">
                         </td>
 
                         <td>
-                            Raqsa şexanî
+                            {{$value->music_category->name}}
                         </td>
                         <td>
                             1
                         </td>
                         <td>
-                            2h 30min
+                            0 min
                         </td>
                         <td>
-                            1.39 GB
+                            0 GB
 
                         </td>
                         <td>
 
-                            <a href="{{ url('musics/1') }}" class="btn btn-primary" data-bs-placement="top"
+                            <a href="{{ url("music/$value[_id]") }}" class="btn btn-primary" data-bs-placement="top"
                                 data-bs-html="true" data-bs-original-title="Edit">View</a>
+
+                                <a href="{{ route('music.edit',$value['_id']) }}" class="btn btn-primary" data-bs-placement="top"
+                                data-bs-html="true" data-bs-original-title="Edit">edit</a>
                             <!--<a  href="{{ url('musics/1') }}" class="btn btn-primary" data-bs-placement="top" data-bs-html="true" data-bs-original-title="Edit">Edit</a>-->
-                            <button class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#createcategoryModal">{{ $type == 'music' ? 'Edit' : 'Add Song' }}</button>
+                            {{-- <button class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#editmusicModal">{{ $type == 'music' ? 'Edit' : 'Add Song' }}</button> --}}
                         </td>
 
 
@@ -208,19 +211,27 @@ https://cdn.jsdelivr.net/npm/dropify@0.2.2/dist/css/dropify.min.css
         @include('content.include.music.createForm')
     </x-modal>
 
+    <x-modal id="editmusicModal" title="{{ $type == 'music' ? 'Edit Music' : 'Create Songs' }}" saveBtnText="Create"
+        saveBtnType="submit" saveBtnForm="createForm" size="md">
+
+        @include('content.include.music.createForm')
+    </x-modal>
+
 
     <x-modal id="createcategoryModal" title="{{ $type == 'music' ? 'Create Category' : 'Create Songs' }}"
         saveBtnText="Create" saveBtnType="submit" saveBtnForm="createForm" size="md">
 
-        @include('content.include.music.createFormCat')
+        {{-- @include('content.include.music.createFormCat') --}}
+        @include('content.include.music_category.createForm')
     </x-modal>
+
 
     <!-- SubCategories Modal -->
     <div class="modal fade" id="sub-categories" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-sub-categories">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel3">Subcategories</h5>
+                    <h5 class="mod.al-title" id="exampleModalLabel3">Subcategories</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

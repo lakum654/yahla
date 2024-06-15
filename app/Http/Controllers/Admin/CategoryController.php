@@ -20,6 +20,8 @@ class CategoryController extends Controller
     {
         $hasSubcategories = request()->has_sub_categories;
         $target = request()->target;
+
+        dd($target);
         $categories = Category::where('target', $target)
                             ->whereNull('parent_id')
                             ->get();
@@ -44,7 +46,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-
+        dd($request);
         $validated = $request->validated();
 
         $imagePath = null;

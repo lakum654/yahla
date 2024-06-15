@@ -1,3 +1,4 @@
+<link href="https://cdn.jsdelivr.net/npm/dropify@0.2.2/dist/css/dropify.min.css" rel="stylesheet">
 <form id="createForm" method="POST" action="{{ route('music-category.store') }}" enctype="multipart/form-data">
     @csrf
     <div class="hidden-inputs"></div>
@@ -24,7 +25,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
 </div>
     </div>
 
@@ -93,7 +94,7 @@
                         data: {path: file.previewElement.dataset.path},
                         success: function () {}
                     });
-                    
+
                     return this._updateMaxFilesReachedClass();
                 }
             });

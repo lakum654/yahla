@@ -25,6 +25,8 @@
                     </div>
                 </div>
             </div>
+
+            {{-- @dd($music) --}}
             <div class="card-body">
                 <form method="POST" action="{{ route('music.update',$music->id) }}" enctype="multipart/form-data">
                     @csrf
@@ -33,13 +35,13 @@
                         <div class="col-lg-8 mx-auto">
                             <h5 class="mb-4">Music</h5>
                             <div class="row g-3">
-                                <div class="col-md-12">
+                                {{-- <div class="col-md-12">
                                     <label class="form-label" for="fullname">Title</label>
                                     <input type="text" id="fullname" class="form-control" name="title" value="{{ $music->name ?? '' }}">
                                     @error('title')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
-                                </div>
+                                </div> --}}
                                 <div class="col-md-12">
                                     <label class="form-label" for="fullname">Category Name</label>
                                     <select class="form-select" aria-label="Default select example" name="category_id">
@@ -56,7 +58,7 @@
                                     <label class="form-label" for="fullname">Audio</label>
                                     <input type="file" name="audio" class="form-control" id="audio" accept="audio/*" />
                                     <audio controls>
-                                        <source src="{{ asset('storage/'.$music->audio) }}" /></audio>
+                                        <source src="{{ asset('storage/'.implode(',',$music->audio)) }}" /></audio>
                                     @error('audio')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror

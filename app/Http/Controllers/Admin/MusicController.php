@@ -49,7 +49,7 @@ class MusicController extends Controller
     {
 
 
-        dd($request->all());
+        // dd($request->all());
         $type  = $request->segments()[0];
         $request->validate([
             'category_id'=>'required',
@@ -101,6 +101,8 @@ class MusicController extends Controller
     public function edit($id)
     {
         $music = Music::findorFail($id);
+
+        // dd($music);
         $music_category = MusicCategory::get();
         return view('content.music.edit' , compact('music_category' , 'music'));
     }
