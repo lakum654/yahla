@@ -57,7 +57,7 @@
                     <td>{{ $video->title ?? '' }}</td>
                     <?php
                                 $json = $video->video;
-                                $arr = json_decode($json, true); 
+                                $arr = json_decode($json, true);
                               ?>
 
                     <td><?php $ID=$video->artist->id ?? ''; $count = DB::table('uplaod_video_clips')->where('category_id' , $ID)->count(); ?>{{ $count ?? '' }}</td>

@@ -17,6 +17,7 @@ class VideoClipController extends Controller
     public function index(Request $request)
    {
         $video  = VideoClip::with('music_category')->get();
+        // dd($video);
         $music_category  = MusicCategory::get();
         $artists = Artist::get();
         return view('content.video_clips.index' , compact('video' , 'music_category' , 'artists'));
@@ -40,9 +41,9 @@ class VideoClipController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'category_id'=>'required',
-          ]); 
+        // $request->validate([
+        //     'category_id'=>'required',
+        //   ]);
 
     //   $music_implode = implode('' , $request->audio_paths);
       $video = new VideoClip();
@@ -91,13 +92,13 @@ class VideoClipController extends Controller
      */
     public function update(Request $request, $id)
     {
-      
+
         $video = VideoClip::findorFail($id);
         $video->name = $request->title;
         $video->category_id = $request->category_id;
         $video->artist_id = $request->artist_id;
         $video->video = $request->video_paths ?? [];
-        $video->status = $request->status;        
+        $video->status = $request->status;
         if($video->update()){
             return redirect()->back()->with('success', 'Video Has been Updated');
 
@@ -135,7 +136,7 @@ class VideoClipController extends Controller
     }
     public function status($id , $status){
         $video = VideoClip::find($id);
-       
+
         $video->status = $status;
         if($video->update()){
             return redirect()->route('video-clips.index')->with('success', 'Status Has been Updated');
@@ -149,7 +150,7 @@ class VideoClipController extends Controller
     {
         $video = VideoClip::find($id);
         $video->video = array_filter($video->video, function ($path) use ($request) {
-            return !($path === $request->path); 
+            return !($path === $request->path);
         });
         $video->save();
         unlink(public_path('storage/' . $request->path));
